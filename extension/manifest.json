@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "YT Downloader Helper",
+  "version": "1.0",
+  "description": "YouTube video ko Video Downloader app me bhejta hai (Native Messaging).",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyLFjy4yMcnLGVxpV76ctafMQb0+BM1aHOoaPX6zdSebfLYo2OdtcM1ZGwA7HWgdgiRr16M6cKq49mtYJ1wXs3gv2nOpT7imSlE73ZoG7ju1urYfjSgRIJm4NnQLzS57g/wYoBnJrBoBPX5w0hFp/5OULfO9ep5y01d8BD84vrf63wa0r1GsEOIIIPJS07Fitl8XCLHtqrw1zbYKwjgvub7yjFgE2ojQuSbEwnWdGCyDZ+yxG1+DRb70v4or+elyWUrCnTPjaHAYBpqfueCEFy6k4yNPLPL6Me2TpmPqcXqeNs+06l7+v5t2Lnck5h4K5dbMkgv8q8dgh+5QWuLxuXwIDAQAB",
+  "permissions": [
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Video Downloader",
+    "default_popup": "popup.html"
+  }
+}

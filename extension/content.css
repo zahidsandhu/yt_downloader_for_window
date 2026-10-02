@@ -1,0 +1,17 @@
+#ytdl-helper-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2147483647;
+  background: #ef4444;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font: 600 14px "Segoe UI", Roboto, Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: background 0.15s, transform 0.15s;
+}
+#ytdl-helper-btn:hover { background: #dc2626; transform: translateY(-1px); }
+#ytdl-helper-btn:disabled { background: #64748b; cursor: default; }
